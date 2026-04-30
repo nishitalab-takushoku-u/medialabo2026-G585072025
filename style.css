@@ -1,4 +1,4 @@
-*{
+body{
     background-color:azure;
 }
 
@@ -6,12 +6,12 @@ a{
     color:blue;;
 }
 
-a.visited{
+a:visited{
     color:slateblue;
     text-decoration:none;
 }
 
-a :hover{
+a:hover{
     color:lightseagreen;
 }
 
