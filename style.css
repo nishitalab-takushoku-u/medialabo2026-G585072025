@@ -1,0 +1,29 @@
+*{
+    background-color:azure;
+}
+
+a{
+    color:blue;;
+}
+
+a.visited{
+    color:slateblue;
+    text-decoration:none;
+}
+
+a :hover{
+    color:lightseagreen;
+}
+
+h1{
+    background-color: #615e5e4a;
+}
+
+h2{
+    text-decoration:darkcyan 3.5px underline;
+    text-underline-offset:8px;
+}
+
+h3{
+    font-style:italic;
+}
