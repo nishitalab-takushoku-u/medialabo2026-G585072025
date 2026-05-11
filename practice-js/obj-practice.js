@@ -18,11 +18,11 @@ let gakka = [
 console.log(campus.address);
 
 for(let d of campus.buildingD){
-	console.log(room);
+	console.log(d);
 }
 
 for(let n of gakka){
-	console.log(n.gakka);
+	console.log(n.name);
 }
 
 
