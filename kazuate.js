@@ -9,18 +9,16 @@ let ans = Number(kotae);
 let kaisu = 1;
 
 // そのほか，必要に応じて変数を宣言してもよい
-let freq = Number(kaisu);
-freq = document.querySelector('#kaisu');
-freq.textContent='kaisu';
+let freq = document.querySelector('#kaisu');
+freq.textContent=kaisu;
 let a = document.querySelector('p#result');
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
   // ここから: 予想回数を1増やして，span#kaisu 要素のテキストを更新
+  freq.textContent =kaisu;
   kaisu = kaisu + 1;
-  freq.textContent ='kaisu';
-  let p = document.querySelector('#kaisu');
-  p.textContent = freq;
+  
   // ここまで: 予想回数を1増やして，span#kaisu 要素のテキストを更新
   
   // ここから: テキストボックスに指定された数値を yoso に代入する
@@ -29,7 +27,7 @@ function hantei() {
   // ここまで: テキストボックスに指定された数値を yoso に代入する
   
   // ここから: 正解判定する
-  if(freq<=3){
+  if(kaisu<=3){
     // 　　　　  正解/不正解のときのメッセージを表示する
     if(ans===num){
       a.textContent = '正解です。 おめでとうございます！';
