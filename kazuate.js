@@ -10,6 +10,7 @@ let kaisu = 1;
 
 // そのほか，必要に応じて変数を宣言してもよい
 let freq = Number(kaisu);
+freq = document.querySelector('#kaisu');
 let a = document.querySelector('p#result');
 
 // ボタンを押した後の処理をする関数 hantei() の定義
