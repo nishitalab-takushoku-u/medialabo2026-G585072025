@@ -1,7 +1,5 @@
 function greeting(){
-
     let i = document.querySelector('input[name="shimei"]');
-    
     let p = document.querySelector('p#message');
     p.textContent = 'こんにちは, '+i.value+'さん';
 }
