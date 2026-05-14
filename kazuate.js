@@ -11,14 +11,14 @@ let kaisu = 1;
 // そのほか，必要に応じて変数を宣言してもよい
 let freq = Number(kaisu);
 freq = document.querySelector('#kaisu');
-freq.textContent('kaisu');
+freq.textContent='kaisu';
 let a = document.querySelector('p#result');
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
   // ここから: 予想回数を1増やして，span#kaisu 要素のテキストを更新
   kaisu = kaisu + 1;
-  freq.textContent('kaisu');
+  freq.textContent ='kaisu';
   let p = document.querySelector('#kaisu');
   p.textContent = freq;
   // ここまで: 予想回数を1増やして，span#kaisu 要素のテキストを更新
@@ -47,7 +47,7 @@ function hantei() {
 }
 
 // ここから: ボタンを押した時のイベントハンドラとして hantei を登録
-let i = document.querySelector('button#calc');
+let i = document.querySelector('button#submit');
 
 i.addEventListener('click',hantei);
 
