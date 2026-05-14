@@ -2,7 +2,8 @@ function greeting(){
     let i = document.querySelector('input[name="shimei"]');
     let shimei = i.value;
     let p = document.querySelector('p#message');
-    p.textContent = 'こんにちは, '+shimei+'さん';
+    let aisatsu = 'こんにちは, '+shimei+'さん';
+    p.textContent = aisatsu;
 }
 
 let b = document.querySelector('button#print');
