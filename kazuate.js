@@ -47,6 +47,6 @@ function hantei() {
 // ここから: ボタンを押した時のイベントハンドラとして hantei を登録
 let i = document.querySelector('button#calc');
 
-i.addEventListener('button#submit');
+i.addEventListener('click',hantei);
 
 // ここまで: ボタンを押した時のイベントハンドラとして hantei を登録
