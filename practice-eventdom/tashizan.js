@@ -4,7 +4,7 @@ function calculate() {
     let b = document.querySelector('input[name="left"]');
     let num2 = Number(b.value);
     let result = num1 + num2;
-    let p = document.querySelector('p#answer');
+    let p = document.querySelector('#answer');
     p.textContent = result;
 }
 
