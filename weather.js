@@ -96,8 +96,6 @@ function showResult(resp) {
   }
   //dataをコンソールに出力
   console.log(data);
-  //data.xを出力
-  console.log(data.x);
   print(data);
   printDom(data);
 }
