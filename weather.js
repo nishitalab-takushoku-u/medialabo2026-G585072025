@@ -109,6 +109,7 @@ function finish() {
     console.log('Ajax 通信が終わりました');
 }
 
+document.querySelector("#print").addEventListener("click", sendRequest);
 ////////////////////////////////////////
 // 以下はグルメのデータサンプル
 // 注意: 第5回までは以下を変更しないこと！
