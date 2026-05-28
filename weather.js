@@ -4,7 +4,7 @@ function print(data) {
  console.log("検索結果");
  console.log("都市名 :"+data.name);
  console.log("ID :"+data.id);
- console.log("天気 :"+data.weather.description);
+ console.log("天気 :"+data.weather[0].description);
  console.log("最高気温 :"+data.main.temp_max);
  console.log("最低気温 :"+data.main.temp_min);
  console.log("湿度 :"+data.main.humidity);
@@ -92,7 +92,7 @@ function showResult(resp) {
   let data = resp.data;
   // data が文字列型なら,オブジェクトに変換する
   if(typeof data === 'string'){
-    date = JSON.parse(data);
+    data = JSON.parse(data);
   }
   //dataをコンソールに出力
   console.log(data);
