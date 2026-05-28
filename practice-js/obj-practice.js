@@ -25,4 +25,22 @@ for(let n of gakka){
 	console.log(n.name);
 }
 
+let a = document.createElement('p');
+a.textContent = campus.address;
 
+let b = document.querySelector('h2#addr');
+b.insertAdjacentElement('afterend', a);
+
+function Major(){
+	let h2 = document.querySelector('h2#dept');
+	let ul = document.createElement('ul');
+	for(let num of gakka){
+		let li = document.createElement('li');
+		li.textContent = num.name;
+		ul.insertAdjacentElement('beforeend', li);
+	}
+	h2.insertAdjacentElement('afterend', ul);
+}
+
+b = document.querySelector('button#show');
+b.addEventListener('click', Major);

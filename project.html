@@ -8,17 +8,21 @@
         <link rel="stylesheet" href="project.css">
         <script src="weather.js" defer></script>
     </head>
-
+    
     <body>
+
+        <label for="name">検索キー:</label>
+        <input type="search" name="name" size="15" id="name">
+        <button id="print">検索</button>
 
         <h1>世界の天気 
             <span style="font-size:14px; font-weight:normal;">(検索結果1件)</span>
         </h1>
-
+        
         <h2>天気:
-            <span style="font-size:14px; font-weight:normal;">曇りがち</span>
+            <img src="weather_cloudy .png" width="30">
+            <span style="font-size:14px; font-weight:normal;"><ul><li>曇りがち</li></ul></span>
         </h2>
-        <p><img src="weather_cloudy .png" width="30"></p>
         
 
         <h2>気温:</h2>

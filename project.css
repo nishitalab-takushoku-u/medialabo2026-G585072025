@@ -1,0 +1,30 @@
+body{
+    background-color: #eef5ff;
+    margin: 30px;
+    color: #333333;
+}
+
+h1{
+    color: #1e4fa1;
+    border-bottom: 3px solid #7aa7ff;
+    padding-bottom: 10px;
+}
+
+h2, h3{
+    color: #2459b3;
+    margin-top: 25px;
+}
+
+ul{
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+li{
+    margin: 6px 0;
+}
+
+h2 span{
+    margin-left: 5px;
+}
