@@ -15,32 +15,26 @@ let gakka = [
 ];
 
 //////////////// ここから下にプログラムを書きたそう!
-console.log(campus.address);
 
-for(let d of campus.buildingD){
-	console.log(d);
-}
-
-for(let n of gakka){
-	console.log(n.name);
-}
-
-let a = document.createElement('p');
-a.textContent = campus.address;
-
-let b = document.querySelector('h2#addr');
-b.insertAdjacentElement('afterend', a);
-
-function Major(){
-	let h2 = document.querySelector('h2#dept');
-	let ul = document.createElement('ul');
-	for(let num of gakka){
-		let li = document.createElement('li');
-		li.textContent = num.name;
-		ul.insertAdjacentElement('beforeend', li);
+function printDom(data){
+	let r = document.createElement("div");
+	r.id = "result";
+	document.body.insertAdjacentElement("beforeend", r);
+	let p = document.createElement("p");
+	p.textContent = data.address;
+	r.insertAdjacentElement("beforeend", p);
+	let ul1 = document.createElement("ul");
+	for(let d of data.buildingD){
+		let li = document.createElement("li");
+		li.textContent = d;
+		ul1.insertAdjacentElement("beforeend", li);
 	}
-	h2.insertAdjacentElement('afterend', ul);
+	r.insertAdjacentElement("beforeend", ul1);
+	let ul2 = document.createElement("ul");
+	for(let g of data.gakka){
+		let li = document.createElement("li");
+		li.textContent = g.name;
+		ul2.insertAdjacentElement("beforeend", li);
+	}
+	r.insertAdjacentElement("beforeend", ul2);
 }
-
-b = document.querySelector('button#show');
-b.addEventListener('click', Major);
