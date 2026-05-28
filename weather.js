@@ -96,8 +96,7 @@ function showResult(resp) {
   }
   //dataをコンソールに出力
   console.log(data);
-  print(data);
-  printDom(data);
+  
 }
 
 // 課題6-1: 通信エラーが発生した時の処理
