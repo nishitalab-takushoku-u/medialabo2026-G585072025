@@ -81,9 +81,12 @@ function printDom(data) {
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 //通信を開始する処理
 function sendRequest() {
+
+  let input = document.querySelector('#name');
+  let id = input.value;
   // urlを設定
-  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/2643743.json';//ロンドン
-  //let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/{id}.json'
+  //let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/2643743.json';//ロンドン
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+id+'.json'
   //通信開始
   axios.get(url)
   .then(showResult)
@@ -122,50 +125,3 @@ b.addEventListener('click',sendRequest);
 // 以下はグルメのデータサンプル
 // 注意: 第5回までは以下を変更しないこと！
 // 注意2: 課題6-1 で以下をすべて削除すること
-let data = {
-  "coord": {
-    "lon": 116.3972,
-    "lat": 39.9075
-  },
-  "weather": [
-    {
-      "id": 803,
-      "main": "Clouds",
-      "description": "曇りがち",
-      "icon": "04d"
-    }
-  ],
-  "base": "stations",
-  "main": {
-    "temp": 9.94,
-    "feels_like": 8.65,
-    "temp_min": 9.94,
-    "temp_max": 9.94,
-    "pressure": 1022,
-    "humidity": 14,
-    "sea_level": 1022,
-    "grnd_level": 1016
-  },
-  "visibility": 10000,
-  "wind": {
-    "speed": 2.65,
-    "deg": 197,
-    "gust": 4.84
-  },
-  "clouds": {
-    "all": 53
-  },
-  "dt": 1646542386,
-  "sys": {
-    "type": 1,
-    "id": 9609,
-    "country": "CN",
-    "sunrise": 1646520066,
-    "sunset": 1646561447
-  },
-  "timezone": 28800,
-  "id": 1816670,
-  "name": "北京市",
-  "cod": 200
-};
-
