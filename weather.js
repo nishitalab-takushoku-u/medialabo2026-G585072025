@@ -34,6 +34,11 @@ function printDom(data) {
 
     let h31 = document.createElement("h3");
     h31.textContent = "都市情報";
+
+    let img1 = document.createElement("img");
+    img1.setAttribute("src","map_location.png");
+
+    h31.insertAdjacentElement("afterbegin",img1);
     result.insertAdjacentElement("beforeend",h31);
 
     let ul1 = document.createElement("ul");
@@ -46,6 +51,10 @@ function printDom(data) {
 
     let h32 = document.createElement("h3");
     h32.textContent = "天気情報";
+
+    let img2 = document.createElement("img");
+    img2.setAttribute("src","weather_cloudy.png");
+    
     result.insertAdjacentElement("beforeend",h32);
 
     let ul2 = document.createElement("ul");
