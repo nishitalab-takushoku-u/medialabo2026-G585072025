@@ -10,12 +10,18 @@ function print(data) {
  console.log("湿度 :"+data.main.humidity);
  console.log("風速 :"+data.wind.speed);
  console.log("風向 :"+data.wind.deg);
- console.log("緯度 :"+data.coord.lon);
- console.log("経度 :"+data.coord.lat);
+ console.log("経度 :"+data.coord.lon);
+ console.log("緯度 :"+data.coord.lat);
 }
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+
+  let first = document.querySelector("#result");
+
+  if(first){
+    first.remove();
+  }
 
     let result = document.createElement("div");
     result.id = "result";
@@ -77,7 +83,7 @@ function printDom(data) {
 function sendRequest() {
   // urlを設定
   let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/2643743.json';//ロンドン
-  //https://www.nishita-lab.org/web-contents/jsons/openweather/{id}.json
+  //let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/{id}.json'
   //通信開始
   axios.get(url)
   .then(showResult)
@@ -97,6 +103,7 @@ function showResult(resp) {
   //dataをコンソールに出力
   console.log(data);
   print(data);
+  printDom(data);
 }
 
 // 課題6-1: 通信エラーが発生した時の処理
