@@ -37,6 +37,8 @@ function printDom(data) {
 
     let img1 = document.createElement("img");
     img1.setAttribute("src","map_location.png");
+    img1.style.height = "1em";
+    img1.style.verticalAlign = "middle";
 
     h31.insertAdjacentElement("afterbegin",img1);
     result.insertAdjacentElement("beforeend",h31);
@@ -54,7 +56,10 @@ function printDom(data) {
 
     let img2 = document.createElement("img");
     img2.setAttribute("src","weather_cloudy.png");
-    
+    img2.style.height = "1em";
+    img1.style.verticalAlign = "middle";
+
+    h32.insertAdjacentElement("afterbegin",img2);
     result.insertAdjacentElement("beforeend",h32);
 
     let ul2 = document.createElement("ul");
