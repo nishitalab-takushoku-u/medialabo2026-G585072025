@@ -32,45 +32,73 @@ function printDom(data) {
     h2.textContent = "世界の天気";
     result.insertAdjacentElement("beforeend", h2);
 
-    let ul = document.createElement("ul");
+    let h31 = document.createElement("h3");
+    h31.textContent = "都市情報";
+    result.insertAdjacentElement("beforeend",h31);
+
+    let ul1 = document.createElement("ul");
 
     let li1 = document.createElement("li");
     li1.textContent = "都市名: " + data.name;
-    ul.insertAdjacentElement("beforeend", li1);
+    ul1.insertAdjacentElement("beforeend", li1);
+
+    result.insertAdjacentElement("beforeend",ul1);
+
+    let h32 = document.createElement("h3");
+    h32.textContent = "天気情報";
+    result.insertAdjacentElement("beforeend",h32);
+
+    let ul2 = document.createElement("ul");
 
     let li2 = document.createElement("li");
     li2.textContent = "天気: " + data.weather[0].description;
-    ul.insertAdjacentElement("beforeend", li2);
+    ul2.insertAdjacentElement("beforeend", li2);
 
     let li3 = document.createElement("li");
     li3.textContent = "最高気温: " + data.main.temp_max;
-    ul.insertAdjacentElement("beforeend", li3);
+    ul2.insertAdjacentElement("beforeend", li3);
 
     let li4 = document.createElement("li");
     li4.textContent = "最低気温: " + data.main.temp_min;
-    ul.insertAdjacentElement("beforeend", li4);
+    ul2.insertAdjacentElement("beforeend", li4);
 
     let li5 = document.createElement("li");
     li5.textContent = "湿度: " + data.main.humidity;
-    ul.insertAdjacentElement("beforeend", li5);
+    ul2.insertAdjacentElement("beforeend", li5);
+
+    result.insertAdjacentElement("beforeend",ul2);
+
+    let h33 = document.createElement("h3");
+    h33.textContent = "風情報";
+    result.insertAdjacentElement("beforeend",h33);
+
+    let ul3 = document.createElement("ul");
 
     let li6 = document.createElement("li");
     li6.textContent = "風速: " + data.wind.speed;
-    ul.insertAdjacentElement("beforeend", li6);
+    ul3.insertAdjacentElement("beforeend", li6);
 
     let li7 = document.createElement("li");
     li7.textContent = "風向: " + data.wind.deg;
-    ul.insertAdjacentElement("beforeend", li7);
+    ul3.insertAdjacentElement("beforeend", li7);
+
+    result.insertAdjacentElement("beforeend",ul3);
+
+    let h34 = document.createElement("h3");
+    h34.textContent = "位置情報";
+    result.insertAdjacentElement("beforeend",h34);
+
+    let ul4 = document.createElement("ul");
 
     let li8 = document.createElement("li");
     li8.textContent = "経度: " + data.coord.lon;
-    ul.insertAdjacentElement("beforeend", li8);
+    ul4.insertAdjacentElement("beforeend", li8);
 
     let li9 = document.createElement("li");
     li9.textContent = "緯度: " + data.coord.lat;
 
-    ul.insertAdjacentElement("beforeend", li9);
-    result.insertAdjacentElement("beforeend", ul);
+    result.insertAdjacentElement("beforeend",ul4);
+
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
@@ -121,6 +149,7 @@ function finish() {
 
 let b = document.querySelector('#print');
 b.addEventListener('click',sendRequest);
+
 ////////////////////////////////////////
 // 以下はグルメのデータサンプル
 // 注意: 第5回までは以下を変更しないこと！
