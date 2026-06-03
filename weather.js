@@ -55,9 +55,9 @@ function printDom(data) {
     h32.textContent = "天気情報";
 
     let img2 = document.createElement("img");
-    img2.setAttribute("src","weather_cloudy.png");
+    img2.setAttribute("src","weather_cloudy .png");
     img2.style.height = "1em";
-    img1.style.verticalAlign = "middle";
+    img2.style.verticalAlign = "middle";
 
     h32.insertAdjacentElement("afterbegin",img2);
     result.insertAdjacentElement("beforeend",h32);
@@ -110,6 +110,7 @@ function printDom(data) {
 
     let li9 = document.createElement("li");
     li9.textContent = "緯度: " + data.coord.lat;
+    ul4.insertAdjacentElement("beforeend",li9);
 
     result.insertAdjacentElement("beforeend",ul4);
 
